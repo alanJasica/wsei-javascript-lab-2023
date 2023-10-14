@@ -4,15 +4,12 @@
  * Załóż, że w area jest zawsze liczba nieujemna. Zmienna PI jest w bibliotece Math
  */
 let area = 3.14159;
-let radius = '';
-/*
-    Wpisz kod zadania w miejscu tego komentarza.
-*/
-console.log(radius)
-if (radius === '1.000000'){
-    console.log("Test passed");
+let radius = Math.sqrt(area / Math.PI);
+radius = radius.toFixed(6);
+
+console.log(radius);
+if (radius === "1.000000") {
+  console.log("Test passed");
 } else {
-    console.log("Test failed");
+  console.log("Test failed");
 }
-
-

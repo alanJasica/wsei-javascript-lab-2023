@@ -1,5 +1,5 @@
 /**
- * Napisz skrypt, który w łańcuchu triangle generuje ciąg znaków '#' i '\n' tworzących kształ trójkąta o wysokości 
+ * Napisz skrypt, który w łańcuchu triangle generuje ciąg znaków '#' i '\n' tworzących kształ trójkąta o wysokości
  * w zmiennej height. Po wyświetleniu na konsoli powinien zostać wyświetlony poniższy wzór liczba wierszy powinna odpowiadać
  * zmiennej height:
  * #
@@ -12,9 +12,11 @@
  * height = 0
  * height = 10
  */
-let height = 5;
-let triangle = '';
-/*
-    Wpisz kod zadania w miejscu tego komentarza.
-*/
-console.log(triangle);
+let height = 10;
+let triangle = "";
+for (let i = 1; i <= height; i++) {
+  for (let j = 1; j <= i; j++) {
+    triangle += "#";
+  }
+  console.log(triangle);
+}
