@@ -12,9 +12,9 @@
  * height = 0
  * height = 10
  */
-let height = 10;
+let hgt = 10;
 let triangle = "";
-for (let i = 1; i <= height; i++) {
+for (let i = 1; i <= hgt; i++) {
   for (let j = 1; j <= i; j++) {
     triangle += "#";
   }

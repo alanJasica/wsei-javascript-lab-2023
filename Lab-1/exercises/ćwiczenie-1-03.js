@@ -4,11 +4,11 @@
  * Jeśli decimalNumber nie zmieści sie w zakresie to umieść w romanNumber komunikat: Decimal number is out of range!
  * Jeśli decimalNumber jest równe undefined lub null to umieść w romanNumber komunikat: Decimal number is undefined or null!
  */
-let decimalNumber = 10;
+let decNumber = 10;
 let romanNumber = " ";
-if (decimalNumber === undefined || decimalNumber === null) {
+if (decNumber === undefined || decNumber === null) {
   romanNumber = "Decimal number is undefined or null!";
-} else if (decimalNumber < 1 || decimalNumber > 10) {
+} else if (decNumber < 1 || decNumber > 10) {
   romanNumber = "Decimal number is out of range!";
 } else {
   let romanNumerals = [
@@ -23,7 +23,7 @@ if (decimalNumber === undefined || decimalNumber === null) {
     "IX",
     "X",
   ];
-  romanNumber = romanNumerals[decimalNumber - 1];
+  romanNumber = romanNumerals[decNumber - 1];
 }
 
 console.log(romanNumber);
