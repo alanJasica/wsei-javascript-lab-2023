@@ -2,8 +2,8 @@
  * Zbuduj z użyciem prototypów hierarchę obiektów,
  * Obiekt `email` z lista właściwości:
  * content,
- * to, 
- * from, 
+ * to,
+ * from,
  * subject
  * Obiekt `SMS` z własciwościami:
  * content,
@@ -14,18 +14,28 @@
  * creator
  * Obiekty `email` i `SMS` powinny mieć ten sam prototyp w postaci obiektu `message`
  */
-let message = {};           //zmień definicje obiektu 
-let email = {};             //zmień definicje obiektu
-let SMS = {};               //zmień definicję obiektu
-
+let message = { content: "content", creator: "test" }; //zmień definicje obiektu
+let email = {
+  __proto__: message,
+  content: "content",
+  to: "to",
+  from: "from",
+  subject: "subject",
+}; //zmień definicje obiektu
+let SMS = {
+  __proto__: message,
+  content: "content",
+  phoneTo: "phoneTo",
+  phoneFrom: "phoneFrom",
+}; //zmień definicję obiektu
 //Testy
-if (email.__proto__ === SMS.__proto__ && email.__proto__ !== {}.__proto__){
-    console.log("Test 61 passed");
+if (email.__proto__ === SMS.__proto__ && email.__proto__ !== {}.__proto__) {
+  console.log("Test 61 passed");
 } else {
-    console.log("Test 61 failed");
+  console.log("Test 61 failed");
 }
 if (email.creator) {
-    console.log("Test 62 passed");
+  console.log("Test 62 passed");
 } else {
-    console.log("Test 62 failed");
+  console.log("Test 62 failed");
 }
